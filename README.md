@@ -1,2 +1,2 @@
 # caffiend
- A coffee tracking app w. React.JS FantaCSS & Firebase
+An IOT project which replaces local RFID scanners with a centralized web service, using React.JS, FantaCSS & Firebase
