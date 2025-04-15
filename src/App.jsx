@@ -1,4 +1,4 @@
-import CoffeeForm from "./components/CoffeeForm"
+import CoffeeForm from "./components/LockerForm"
 import Hero from "./components/Hero"
 import History from "./components/History"
 import Layout from "./components/Layout"

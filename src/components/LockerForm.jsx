@@ -1,4 +1,4 @@
-import { coffeeOptions } from "../utils"
+import { lockerOptions } from "../utils"
 import { useState } from 'react'
 import Modal from "./Modal"
 import Authentication from "./Authentication"

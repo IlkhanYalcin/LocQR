@@ -1,5 +1,5 @@
 import { useAuth } from "../context/AuthContext"
-import { calculateCoffeeStats, calculateCurrentCaffeineLevel, coffeeConsumptionHistory, getTopThreeCoffees, statusLevels } from "../utils"
+import { calculateCoffeeStats, calculateCurrentCaffeineLevel, lockerConsumptionHistory, getTopThreeCoffees, statusLevels } from "../utils"
 
 function StatCard(props) {
     const { lg, title, children } = props
@@ -37,10 +37,10 @@ export default function Stats() {
                     </div>
                     <p>{statusLevels[warningLevel].description}</p>
                 </StatCard>
-                <StatCard title="Daily Caffeine">
+                <StatCard title="Daily Locker Usage">
                     <p><span className="stat-text">{stats.daily_caffeine}</span>mg</p>
                 </StatCard>
-                <StatCard title="Avg # of Coffees">
+                <StatCard title="Avg # of Occupied Lockers">
                     <p><span className="stat-text">{stats.average_coffees}</span></p>
                 </StatCard>
                 <StatCard title="Daily Cost ($)">
@@ -52,7 +52,7 @@ export default function Stats() {
                 <table className="stat-table">
                     <thead>
                         <tr>
-                            <th>Coffee Name</th>
+                            <th>Locker Number</th>
                             <th>Number of Purchase</th>
                             <th>Percentage of Total</th>
                         </tr>

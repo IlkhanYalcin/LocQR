@@ -11,8 +11,8 @@ export default function History() {
                 <h2>History</h2>
             </div>
             <p><i>Hover for more information!</i></p>
-            <div className="coffee-history">
-                {Object.keys(globalData).sort((a, b) => b - a).map((utcTime, coffeeIndex) => {
+            <div className="Locker-history">
+                {Object.keys(globalData).sort((a, b) => b - a).map((utcTime, lockerIndex) => {
                     const coffee = globalData[utcTime]
                     const timeSinceConsume = timeSinceConsumption(utcTime)
                     const originalAmount = getCaffeineAmount(coffee.name)
@@ -23,7 +23,7 @@ export default function History() {
                     const summary = `${coffee.name} | ${timeSinceConsume} | $${coffee.cost} | ${remainingAmount}mg / ${originalAmount}mg`
 
                     return (
-                        <div title={summary} key={coffeeIndex}>
+                        <div title={summary} key={lockerIndex}>
                             <i className="fa-solid fa-mug-hot" />
                         </div>
                     )
