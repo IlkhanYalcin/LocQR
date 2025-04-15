@@ -1,10 +1,9 @@
-import CoffeeForm from "./components/LockerForm"
+import LockerForm from "./components/LockerForm"
 import Hero from "./components/Hero"
 import History from "./components/History"
 import Layout from "./components/Layout"
 import Stats from "./components/Stats"
 import { useAuth } from "./context/AuthContext"
-import { coffeeConsumptionHistory } from "./utils"
 
 function App() {
   const { globalUser, isLoading, globalData } = useAuth()
@@ -21,7 +20,7 @@ function App() {
   return (
     <Layout>
       <Hero />
-      <CoffeeForm isAuthenticated={isAuthenticated} />
+      <LockerForm isAuthenticated={isAuthenticated} />
       {(isAuthenticated && isLoading) && (
         <p>Loading data...</p>
       )}
